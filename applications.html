@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PlasmaZen - Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Main Section */
+    .mainsection {
+    padding: 120px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background: white; 
+    animation: fadeIn 1s ease-out;
+    }
+
+    .container_box {
+            display: flex;
+            justify-content: center; /* Center aligns boxes horizontally */
+            align-items: center; /* Aligns items vertically */
+            gap: 20px; /* Even spacing between boxes */
+            flex-wrap: wrap; /* Ensures responsiveness */
+            width: 100%; /* Uses full width */
+            text-align: center;
+        }
+
+        .info-box {
+            background: #ffff;
+            color: #845CE2;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 300px; /* Fixed width for uniformity */
+            height: 300px; /* Fixed height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+
+        .info-box img {
+            width: 100px; /* Adjust image size */
+            margin-bottom: 10px;
+        }
+
+        /* Make the results image responsive */
+        .mainsection img {
+            max-width: 100%;  /* Ensures image doesn't exceed container width */
+            height: auto;     /* Maintains the aspect ratio */
+            display: block;   /* Ensures image is block-level (avoids inline spacing) */
+            margin: 20px 0;   /* Optional: adds vertical space around the image */
+        }
+
+</style>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <img src="pz_logo.png" alt="PlasmaZen Logo" class="logo-img">
+            <a href="index.html" class="logo-text">PlasmaZen</a>
+        </div>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="technology.html">Technology</a>
+            <a href="applications.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Understanding Plasma -->
+    <section class="mainsection">
+        <h1 class="section-title" style="font-size:2.5em;">Our Services</h1>
+        <h2 class="section-title" style="color:black">Agricultural Plasma Treatment</h2>
+        <div class="section-content fade-in">
+            <p style="font-size: 1.3rem; text-align: justify; margin-bottom: 0px;">Cold plasma enhances agricultural productivity by stimulating seed germination through plasma-induced modification of seed coat permeability and activation of phytohormonal pathways. It also extends shelf life by inactivating microbes on produce surfaces via reactive oxygen and nitrogen species, thus reducing post-harvest losses and improving produce longevity.</p>
+        </div>
+
+        <div class="container_box" style="margin-bottom: 0px;">
+            <div class="info-box">
+                <img src="chemical_free.svg" alt="Eco-Friendly" style="margin-bottom: 15px;;">
+                <p><strong>Chemical Free</strong></p>
+            </div>
+            <div class="info-box">
+                <img src="seed_germination.svg" alt="Effective" style="margin-top:10px;">
+                <p><strong>Enhances Germination</strong></p>
+            </div>
+            <div class="info-box">
+                <img src="seeds.svg" alt="Time Efficient" style="margin-top:35px;">
+                <p><strong>Longer Shelf Life</strong></p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="color:black">Plasma Surface Sterilization</h2>
+        <div class="section-content fade-in">
+            <p style="font-size: 1.3rem; text-align: justify; margin-bottom: 0px;">Plasma sterilization is effective in medical and industrial settings for the decontamination of instruments and surfaces, particularly those sensitive to heat and moisture. This non-contact chemical-free method delivers rapid, efficient sterilization while preserving the integrity of materials, making it a safe, fast, and highly effective disinfection solution.</p>
+        </div>
+
+        <div class="container_box" style="margin-bottom: 0px;">
+            <div class="info-box">
+                <img src="cheaper.svg" alt="Eco-Friendly" style="margin-bottom: 15px;;">
+                <p><strong>5x Cheaper runtime than UV-based systems
+                </strong></p>
+            </div>
+            <div class="info-box">
+                <img src="instant.svg" alt="Effective" style="margin-top:10px;">
+                <p><strong>Instant Odor Neutralization & Sanitization</strong></p>
+            </div>
+            <div class="info-box">
+                <img src="nature.svg" alt="Time Efficient" style="margin-top:35px;">
+                <p><strong>No Residues</strong></p>
+            </div>
+        </div>
+
+        <h1 class="section-title" style="font-size:2.5em;">Results</h1>
+        <div class="section-content fade-in">
+            <p style="font-size: 1.3rem; text-align: justify; margin-bottom: 0px;">Our proprietery plasma technology is </p>
+        </div>
+        </div>
+            <img src="results.png" alt="Results" style="align-items: center;">
+        <div>
+    </section>
+
+    <section class="contact-us">
+        <div>
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Have questions about our technology or how it can benefit your business? Get in touch with us today.</p>
+
+            <div class="contact-info">
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="mailto:info@plasmazen.com">
+                        <i class="fa fa-envelope" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:8px; font-size: 1.2em;"></t>inquiries@plasmazen.com</t>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="tel:+919909825386">
+                        <i class="fa fa-phone" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:20px; font-size: 1.1em;">+91 99098 25386</t>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="#">
+                        <i class="fa fa-map-marker" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:24px; font-size: 1.1em;">PlasmaZen Headquarters, Shapath 1, Suite # 1296, SG Highway, Bodakdev, Ahmedabad, Gujarat, India - 380054</t>
+                    </a>
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/company/plasmazen/" target="_blank">
+                    <img class="linkedin-icon" src="images/linkedin-icon.png" alt="LinkedIn" style="width: 36px;  /* Set the width to the desired size */
+                    height: 36px; object-fit: contain;">
+                </a> 
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a>
+                <a href="technology.html">Technology</a>
+                <a href="applications.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PlasmaZen. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

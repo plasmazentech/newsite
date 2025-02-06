@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PlasmaZen - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        /* Join the Team Section */
+        .join-team {
+            animation: fadeIn 1.3s ease-out;
+        }
+
+        .join-team a {
+            display: inline-block;
+            padding: 15px 30px; 
+            background-color: #845CE2;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .join-team a:hover {
+            background-color: #614196;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Team Section */
+        .team-header {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px; /* Reduced gap */
+            animation: fadeInDown 1.3s ease-out;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .team-member {
+            width: 100%;
+            max-width: 420px; /* Increased max-width for longer names */
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            width: 75%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .team-member h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .team-member h2 + a {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .linkedin-icon {
+            width: 30px !important;
+    height: 30px !important;
+            transition: opacity 0.8s ease;
+        }
+
+        .team-member h3 {
+            font-size: 1.4rem;
+            color: #845CE2;
+            margin-bottom: 15px;
+        }
+
+        .team-member p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Behind the Scenes Section */
+        .behind-scenes {
+            margin-top: 60px;
+            padding: 0 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .behind-scenes h3 {
+            font-size: 2rem;
+            color: #845CE2;
+            margin-bottom: 30px;
+        }
+
+        .behind-scenes p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        
+        .group-image-section {
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeIn 1.6s ease-out;
+        }
+
+        .group-image-section img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 900px) {
+            .team-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 100%;
+                max-width: 90%;
+            }
+
+            .team-member h2,
+            .team-member h2 + a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <img src="pz_logo.png" alt="PlasmaZen Logo" class="logo-img">
+            <a href="index.html" class="logo-text">PlasmaZen</a>
+        </div>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="technology.html">Technology</a>
+            <a href="applications.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main">
+        <h1>About PlasmaZen</h1>
+        <p>PlasmaZen is a deep-tech startup at the forefront of Non-Thermal  Plasma technology. We engineer specialised plasma instruments that drive innovation across agriculture and surface sterilization.</p>
+
+        <!-- Join the Team Box -->
+        <div class="join-team">
+            <a href="join.html">Join the Team</a>
+        </div>
+    </section>
+
+    <!-- Core Team Section Header -->
+    <section class="section-title">
+        <h2 class="team-header">Meet the Core Team</h2>
+    </section>
+
+    <!-- Core Team Section -->
+    <section class="team-section">
+        <!-- CEO Section -->
+        <div class="team-member">
+            <img src="images/ceo.jpg" alt="Kamalesh Khanna, CEO Image">
+            <h2>Kamalesh Khanna</h2>
+            
+            <h3>Co-Founder and CEO
+<a href="https://linkedin.com/in/kamaleshkhanna" target="_blank">
+                <img class="linkedin-icon" src="images/linkedin-icon.png" alt="LinkedIn">
+            </a> 
+</h3>
+            <p>An NIT Trichy alumnus with a B.Tech. in Computer Science Engineering, Kamalesh blends leadership and operational acumen. His experience as School and College President established a strong foundation for strategic initiatives, while his role as a political consultant refined his ability to navigate complex political landscapes.</p>
+        </div>
+
+        <!-- CTO Section -->
+        <div class="team-member">
+            <img src="images/cto.jpg" alt="Shubhabroto Mukherjee, CTO Image">
+            <h2>Shubhabroto Mukherjee</h2>
+            
+            <h3>Co-Founder and CTO
+<a href="https://linkedin.com/in/shubhabroto" target="_blank">
+                <img class="linkedin-icon" src="images/linkedin-icon.png" alt="LinkedIn">
+            </a> 
+
+	    </h3>
+            <p>Born into a family of plasma physicists, Shubhabroto gravitated toward the world of plasma from an early age. His passion led him to study Electrical and Electronics Engineering at NIT Trichy. Founding PlasmaZen is the realization of his vision to bring plasma technology from the lab to real-world applications for a more sustainable future.</p>
+        </div>
+    </section>
+
+    <!-- Behind the Scenes Section -->
+    <section class="behind-scenes">
+        <h3>Behind the Scenes</h3>
+        <p>PlasmaZen's innovations arise from the close collaboration of experts in plasma physics, materials science, power electronics, embedded control systems, surface electrochemistry, and fluid dynamics</p>
+    </section>
+
+    <!-- Group Image Section -->
+    <section class="group-image-section">
+    <img src="images/group-photo.jpg" alt="PlasmaZen Team Group Photo">
+    </section>
+
+    <section class="contact-us">
+        <div>
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Have questions about our technology or how it can benefit your business? Get in touch with us today.</p>
+
+            <div class="contact-info">
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="mailto:info@plasmazen.com">
+                        <i class="fa fa-envelope" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:8px; font-size: 1.2em;"></t>inquiries@plasmazen.com</t>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="tel:+919909825386">
+                        <i class="fa fa-phone" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:20px; font-size: 1.1em;">+91 99098 25386</t>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-container">  <div class="contact-info">
+                    <a href="#">
+                        <i class="fa fa-map-marker" style="font-size:24px;color:#845EC2;"></i>
+                        <t style= "padding-left:24px; font-size: 1.1em;">PlasmaZen Headquarters, Shapath 1, Suite # 1296, SG Highway, Bodakdev, Ahmedabad, Gujarat, India - 380054</t>
+                    </a>
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/company/plasmazen/" target="_blank">
+                    <img class="linkedin-icon" src="images/linkedin-icon.png" alt="LinkedIn" style="width: 36px;  /* Set the width to the desired size */
+                    height: 36px; object-fit: contain;">
+                </a> 
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a>
+                <a href="technology.html">Technology</a>
+                <a href="applications.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PlasmaZen. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

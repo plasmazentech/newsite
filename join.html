@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Join the Team - PlasmaZen Careers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+        /* Job Listing Container */
+        .job-listing {
+            margin-bottom: 30px;
+        }
+
+        /* Job Header */
+        .job-header {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align the text items properly */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+        }
+
+        .job-header:hover {
+            background: linear-gradient(120deg, #EADCF8 0%, #D9E4FC 100%);
+        }
+
+        .job-header h2 {
+            font-size: 1.8rem;
+            color: #845CE2;
+            margin: 0;
+            padding-right: 20px; /* Add space between job title and location */
+            flex: 1; /* Allow title to take available space */
+        }
+
+        .job-header h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0;
+            padding-left: 10px; /* Add space between location and title */
+        }
+
+        /* Arrow Icon */
+        .arrow-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            margin-left: 12px; 
+        }
+
+        .rotate {
+            transform: rotate(90deg); /* Rotate arrow when expanded */
+        }
+
+        /* Job Details Section */
+        .job-details {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .job-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .job-details ul li {
+            margin-bottom: 10px;
+        }
+
+        .job-details p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .job-details h3 {
+            font-size: 1.4rem;
+            color: #845CE2;
+            margin-bottom: 10px;
+        }
+
+        /* Apply Section */
+        .apply-section {
+            background: linear-gradient(120deg, #EADCF8 0%, #D9E4FC 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .apply-section h2 {
+            font-size: 2rem;
+            color: #845CE2;
+            margin-bottom: 20px;
+        }
+
+        .apply-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .apply-section a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #845CE2;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-section a:hover {
+            background-color: #614196;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+
+            .job-header h2 {
+                font-size: 1.6rem;
+                padding-right: 10px; /* Adjust padding on smaller screens */
+            }
+
+            .job-header h3 {
+                font-size: 1.1rem;
+                margin-top: 10px; /* Ensure better spacing on smaller screens */
+            }
+
+            .apply-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .apply-section p {
+                font-size: 1.1rem;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info-container {
+                margin-bottom: 15px;
+            }
+
+            .contact-info a {
+                display: flex;
+                align-items: center;
+                font-size: 1rem;
+            }
+
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+            }
+
+            .contact-form button {
+                padding: 12px 20px;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 40px;
+            background: white;
+        }
+</style>
+
+<script>
+    // Job Details Toggle Script
+    document.addEventListener("DOMContentLoaded", function () {
+        const jobHeaders = document.querySelectorAll(".job-header");
+
+        jobHeaders.forEach(header => {
+            header.addEventListener("click", function () {
+                const jobDetails = this.nextElementSibling;
+                const arrow = this.querySelector(".arrow-icon");
+                const isOpen = jobDetails.style.display === "block";
+
+                // Close all open job details
+                document.querySelectorAll(".job-details").forEach(detail => {
+                    detail.style.display = "none";
+                });
+
+                // Rotate all arrows back to original position
+                document.querySelectorAll(".arrow-icon").forEach(icon => {
+                    icon.classList.remove("rotate");
+                });
+
+                // Toggle the clicked job's details and arrow rotation
+                if (!isOpen) {
+                    jobDetails.style.display = "block";
+                    arrow.classList.add("rotate");
+                }
+            });
+        });
+    });
+</script>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <img src="pz_logo.png" alt="PlasmaZen Logo" class="logo-img">
+            <a href="index.html" class="logo-text">PlasmaZen</a>
+        </div>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="technology.html">Technology</a>
+            <a href="applications.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main">
+        <h1>Join the PlasmaZen Revolution!</h1>
+        <p><strong><em>The future isn’t just approaching—it’s being forged right now!</em></strong></p>
+        <p>If you believe in pushing the frontiers of what’s possible, we invite you to explore our current job openings below. Together, let’s redefine the present!</p>
+
+        <!-- Job Posting for Embedded Systems Engineer -->
+        <div class="job-listing">
+            <div class="job-header">
+                <h2>Embedded Systems Engineer</h2>
+                <h3>Location: Ahmedabad,<br>Gujarat</h3>
+                <span class="arrow-icon">&#9654;</span> <!-- Arrow icon -->
+            </div>
+            <div class="job-details">
+                <h3>Key Responsibilities:</h3>
+                <ul>
+                    <li>Develop and maintain firmware for microcontrollers.</li>
+                    <li>Design hardware interfaces and low-level drivers for peripherals.</li>
+                    <li>Implement communication protocols for system integration.</li>
+                    <li>Optimize software for performance, reliability, and safety.</li>
+                    <li>Document technical specifications and ensure compliance with safety standards.</li>
+                </ul>
+                <h3>Required Skills and Experience:</h3>
+                <ul>
+                    <li>Expertise in C/C++ programming and embedded software design patterns.</li>
+                    <li>Experience with ARM-based microcontrollers (NXP, STMicroelectronics, Infineon).</li>
+                    <li>Proficient in Eclipse-based GCC & GDB toolchains.</li>
+                    <li>Familiarity with RTOS (FreeRTOS, Zephyr) and middleware integration (USB, Ethernet, wireless).</li>
+                    <li>Strong knowledge of communication protocols (CAN, SPI, I2C, UART, Ethernet).</li>
+                    <li>Understanding of IoT security standards (Arm's Platform Security Architecture).</li>
+                    <li>Proficient with hardware debugging tools (JTAG, SWD, oscilloscopes, logic analyzers).</li>
+                    <li>Experience in firmware updates and bootloader development.</li>
+                    <li>Knowledge of embedded system safety and reliability practices.</li>
+                    <li>Familiarity with version control systems (Git).</li>
+                    <li>Understanding of EMC/EMI considerations in embedded design.</li>
+                    <li>Excellent problem-solving and communication skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Job Posting for Power Electronics Engineer -->
+        <div class="job-listing">
+            <div class="job-header">
+                <h2>Power Electronics Engineer</h2>
+                <h3>Location: Ahmedabad,<br>Gujarat</h3>
+                <span class="arrow-icon">&#9654;</span> <!-- Arrow icon -->
+            </div>
+            <div class="job-details">
+                <h3>Key Responsibilities:</h3>
+                    <ul>
+                        <li>Design high-efficiency power conversion systems for non-thermal plasma using resonant converters and synchronous rectifiers.</li>
+                        <li>Develop analog/digital circuits for power management with phase-shift modulation and active clamping.</li>
+                        <li>Integrate power electronics with DSP and FPGA control algorithms for real-time optimization.</li>
+                        <li>Optimize power systems for power density, thermal performance, and fault tolerance, ensuring safety compliance.</li>
+                        <li>Conduct simulations and validation using Monte Carlo analysis and thermal modeling.</li>
+                    </ul>
+                    <h3>Required Skills and Experience:</h3>
+                    <ul>
+                        <li>Degree in Electrical Engineering, specializing in Power Electronics.</li>
+                        <li>Expertise in high-power electronics design for plasma systems with dynamic modeling knowledge.</li>
+                        <li>Proficient in SPICE, PLECS, MATLAB/Simulink for circuit optimization.</li>
+                        <li>Experience with DC-DC converters, inverters, and rectifiers using wide bandgap semiconductors like SiC/GaN.</li>
+                        <li>Strong grasp of thermal management, EMI suppression, and grounding techniques.</li>
+                        <li>Skilled in PCB layout for high-frequency applications, ensuring signal integrity.</li>
+                        <li>Familiarity with IEC, UL, and IPC standards.</li>
+                        <li>Strong analytical and problem-solving skills for innovative solutions.</li>
+                    </ul>
+</div>
+        </div>
+
+        <!-- Apply Section -->
+        <div class="apply-section">
+            <h2>Interested in Joining Us?</h2>
+            <p>We’d love to hear from you! Please send your resume and cover letter to <strong>careers@plasmazen.com</strong> to apply for these positions or express your interest in future opportunities.</p>
+            <p>Be sure to include details about your experience and how you see yourself contributing to PlasmaZen’s mission to advance plasma technology.</p>
+            <a href="mailto:careers@plasmazen.com">Apply Now</a>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div>
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Have questions about our technology or how it can benefit your business? Get in touch with us today.</p>
+
+            <div class="contact-info">
+                <div class="contact-info-container">
+                    <a href="mailto:info@plasmazen.com">
+                        <i class="fa fa-envelope" style="font-size:24px;color:#845EC2;"></i>
+                        <span style="padding-left:8px; font-size: 1.2em;">inquiries@plasmazen.com</span>
+                    </a>
+                </div>
+
+                <div class="contact-info-container">
+                    <a href="tel:+919909825386">
+                        <i class="fa fa-phone" style="font-size:24px;color:#845EC2;"></i>
+                        <span style="padding-left:20px; font-size: 1.1em;">+91 99098 25386</span>
+                    </a>
+                </div>
+
+                <div class="contact-info-container">
+                    <a href="#">
+                        <i class="fa fa-map-marker" style="font-size:24px;color:#845EC2;"></i>
+                        <span style="padding-left:24px; font-size: 1.1em;">PlasmaZen Headquarters, Shapath 1, Suite # 1296, SG Highway, Bodakdev, Ahmedabad, Gujarat, India - 380054</span>
+                    </a>
+                </div>
+
+                <a href="https://www.linkedin.com/company/plasmazen/" target="_blank">
+                    <img class="linkedin-icon" src="images/linkedin-icon.png" alt="LinkedIn" style="width: 36px;  /* Set the width to the desired size */
+                    height: 36px; object-fit: contain;">
+                </a> 
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a>
+                <a href="technology.html">Technology</a>
+                <a href="applications.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PlasmaZen. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
